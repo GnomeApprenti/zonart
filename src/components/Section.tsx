@@ -9,7 +9,9 @@ interface SectionProps {
     title: string;
     member: string;
   };
+  scrollToSection?: (id: string) => void;
 }
+
 
 export default function Section({ section }: SectionProps) {
   if (section.id === "galerie") {

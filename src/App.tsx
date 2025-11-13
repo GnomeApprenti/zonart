@@ -13,7 +13,9 @@ const sections = [
 
 export default function App() {
   const [active, setActive] = useState<string | null>(null);
-  const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+  const [visibleSections, setVisibleSections] = useState<Set<string>>(
+    new Set()
+  );
   const [isScrolling, setIsScrolling] = useState(false);
   const refs = useRef<Record<string, HTMLElement | null>>({});
 
@@ -57,18 +59,18 @@ export default function App() {
     const section = refs.current[id];
     if (section) {
       setIsScrolling(true);
-      
+
       // Fade out
       document.body.style.opacity = "0";
       document.body.style.transition = "opacity 0.3s";
-      
+
       setTimeout(() => {
         // Scroll instantané
         section.scrollIntoView({ behavior: "auto", block: "start" });
-        
+
         // Forcer la mise à jour de la section visible
         setVisibleSections(new Set([id]));
-        
+
         // Fade in
         setTimeout(() => {
           document.body.style.opacity = "1";
@@ -82,12 +84,17 @@ export default function App() {
 
   return (
     <div className="relative w-full bg-white">
-      <Header active={active} sections={sections} scrollToSection={scrollToSection} />
+      <Header
+        active={active}
+        sections={sections}
+      />
       <Hero sections={sections} onClick={scrollToSection} />
       {sections.map((section) => (
         <div
           key={section.id}
-          ref={(el) => (refs.current[section.id] = el)}
+          ref={(el) => {
+            refs.current[section.id] = el;
+          }}
           id={section.id}
           className={`w-full min-h-screen flex items-center justify-center transition-opacity duration-700 ${
             visibleSections.has(section.id) ? "opacity-100" : "opacity-0"

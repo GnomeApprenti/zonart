@@ -1,18 +1,12 @@
 import { useEffect, useState } from "react";
 
-interface Section {
-  id: string;
-  title: string;
-  member: string;
-}
-
 interface HeaderProps {
   active: string | null;
-  sections: Section[];
-  scrollToSection: (id: string) => void;
+  sections: { id: string; title: string; member: string }[];
 }
 
-export default function Header({ active, sections, scrollToSection }: HeaderProps) {
+
+export default function Header({ active, sections }: HeaderProps) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
