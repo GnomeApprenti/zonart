@@ -4,7 +4,7 @@ export default function Contact() {
       <div className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-8 md:gap-12 lg:gap-20">
         {/* Image des flèches - cachée sur mobile */}
         <img
-          src="/src/img/arrows.svg"
+          src="/img/arrows.svg"
           alt="des fleches chepas trop c quoi tu connais"
           className="hidden md:block w-24 lg:w-32 object-contain"
         />

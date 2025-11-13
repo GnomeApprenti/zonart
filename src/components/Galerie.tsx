@@ -122,7 +122,7 @@ export default function Galerie({ scrollToSection }: GalerieProps) {
               onClick={() => setSelectedArtwork(artwork)}
             >
               <img
-                src={`/src/img/tableaux/${artwork.file}`}
+                src={`/img/tableaux/${artwork.file}`}
                 alt={`${artwork.title} ${i + 1}`}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
@@ -165,7 +165,7 @@ export default function Galerie({ scrollToSection }: GalerieProps) {
               {/* Image à gauche */}
               <div className="lg:w-1/2 p-6 md:p-10 flex items-center justify-center bg-gray-50">
                 <img
-                  src={`/src/img/tableaux/${selectedArtwork.file}`}
+                  src={`/img/tableaux/${selectedArtwork.file}`}
                   alt={selectedArtwork.title}
                   className="w-full h-auto max-h-[70vh] object-contain"
                 />
@@ -176,7 +176,7 @@ export default function Galerie({ scrollToSection }: GalerieProps) {
                 {/* Logo en haut */}
                 <div className="flex justify-center mb-8">
                   <img 
-                    src="/src/img/logo.svg" 
+                    src="/img/logo.svg" 
                     alt="zon'art logo" 
                     className="h-8 md:h-10"
                   />

@@ -31,7 +31,7 @@ export default function Header({ active, sections }: HeaderProps) {
       {/* Logo central cliquable */}
       <img 
         className="h-6 md:h-8 select-none cursor-pointer hover:opacity-70 transition-opacity"
-        src="/src/img/logo.svg"
+        src="/img/logo.svg"
         alt="Logo zon'art"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       />

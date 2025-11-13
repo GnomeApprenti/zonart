@@ -15,7 +15,7 @@ export default function Hero({ sections, onClick }: HeroProps) {
       <div className="absolute inset-0 flex items-center justify-center px-4">
         <img 
           className="w-[70vw] sm:w-[60vw] md:w-[50vw] lg:w-[45vw] xl:w-[40vw] max-w-3xl select-none"
-          src="/src/img/logo.svg"
+          src="/img/logo.svg"
           alt="Logo zon'art"
         />
       </div>

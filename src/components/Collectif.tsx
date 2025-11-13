@@ -11,7 +11,7 @@ export default function Collectif() {
       {/* Image centrale */}
       <div className="w-full flex justify-center">
         <img 
-          src="src/img/tarzan.png" 
+          src="/img/tarzan.png" 
           alt="nous sur un arbre genre" 
           className="max-w-full h-auto md:max-w-2xl lg:max-w-3xl"
         />
